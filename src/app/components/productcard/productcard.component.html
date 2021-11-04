@@ -1,0 +1,63 @@
+<!-- <div class="product-card">
+    <div class="product-card__inner">
+        <div class="product-card__image" >
+        <! <img src={images[0]} alt="" /> -->
+        <!-- <img [src]="product.images[0]" [alt]="product.title"> -->
+        <!-- </div>
+        <div class="product-card__wrapper">
+            <div class="product-card__rating rating">
+                <span class="rating__count">{rating}
+                    <img class="rating__image" src="../../assets/images/star.svg" alt="star" />
+                </span>
+                
+            </div>  
+            <div class="rating__price">
+                ${{price}}
+            </div>
+        </div>
+        <h3 class="product-card__name">
+            {{title}}
+        </h3>
+        <div class="product-card__description">
+            {{brand}}
+        </div>
+    </div>
+        <div class="product-card__buttons">
+            <button class="button-wishlist">
+                <img class="button-wishlist__image" src="../../assets/images/heart.svg" alt="heart" />
+                <span class="button-wishlist__text">Wishlist</span>
+            </button>
+            <button class="button-addtocart">
+                <img class="button-addtocart__image" src="../../assets/images/shopping-bag.svg" alt="shopping-bag" />
+                <span class="button-addtocart__text">Add to Cart</span>
+            </button>
+        </div>
+</div>  --> 
+
+<div class="product-card">
+    <div class="image">
+        <img class="image__goods" [src]="product.images[0]" />
+    </div>
+
+    <div class="rating-price">
+        <div class="rating">
+            {{product.rating}}
+            <img class="rating__image-star" src="../../../assets/img/star.svg"/>
+        </div>
+        
+        <p class="price">{{product.price}}</p>
+    </div>
+                        
+    <p class="product-card__name">{{product.category}} {{product.brand}}</p>
+    <p class="product-card__information">{{product.title}}</p>
+
+    <div class="product-card-buttons">
+        <button class="product-card-buttons__wishlist">
+          <img class="product-card-buttons__image-heart" src="../../../assets/img/heart.svg"/>
+          <span class="product-card-buttons__name">WISHLIST</span>
+        </button><button class="product-card-buttons__add">
+          <img class="product-card-buttons__image-basket" src="../../../assets/img/basket.svg"/>
+          <span class="product-card-buttons__name">ADD TO CART</span>
+        </button>
+    </div> 
+  </div>
