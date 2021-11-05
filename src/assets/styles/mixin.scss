@@ -1,6 +1,13 @@
-@mixin text-format($font_style, $font_weight, $font_size, $line_height) {
-    font-style: $font_style;
-    font-weight: $font_weight;
-    font-size: $font_size;
-    line-height: $line_height;
-  }
+$primary-normal: #7e72f2;
+
+$background-0: #fff;
+$background-default: #f9f9f9;
+$background-500: #ededed;
+
+$typography-0: #fff;
+$typography-300: #606060;
+$typography-700: #2c2c2c;
+$typography-900: #000;
+
+$border-400: #d6d6d6;
+$border-500: #979797;

@@ -1,13 +1,12 @@
- @import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap);
- @import '../../../assets/styles/mixin.scss';
  @import '../../../assets/styles/variables.scss';
+  @import '../../../assets/styles/mixin.scss';
 
  .product-card {
      width: 300px;
      height: 430px;
-     // background-color: $background-0;
-     // border-radius: $border-radius;
-     // box-shadow: $box-shadow;
+      background-color: $background-0;
+      border-radius: $border-radius;
+      box-shadow: $box-shadow;
      display: flex;
      flex-direction: column;
      justify-content: space-between;
@@ -18,19 +17,19 @@
        padding: 25px;
   
        &__name {
-         // color: $typography-700;
+         color: $typography-700;
          margin-top: 16px;
          margin-bottom: 3px;
          font-size: 16px;
          font-weight: 400;
-         // font-family: $font-family;
+         font-family: $font-family;
        }
     
        &__description {
-         // color: $typography-700;
+         color: $typography-700;
          font-size: 12px;
          font-weight: 300;
-         // font-family: $font-family;
+         font-family: $font-family;
        }
      }
   
@@ -74,15 +73,15 @@
          cursor: pointer;
       
          &__image {
-           //   background-color: $background-500;
+           background-color: $background-500;
            margin-right: 10px;
          }
         
          &__text {
-         //   color: $typography-700;
+           color: $typography-700;
            text-transform: uppercase;
            font-weight: 600;
-         //   font-family: $font-family;
+           font-family: $font-family;
          }
        }
       
@@ -91,27 +90,27 @@
          align-items: center;
          width: 100%;
          justify-content: center;
-         // background-color: $primary-normal;
-         // color: $typography-0;
+         background-color: $primary-normal;
+         color: $typography-0;
          border: none;
          cursor: pointer;
       
          &__image {
-         //   color: $typography-0;
+           color: $typography-0;
            margin-right: 10px;
          }
         
          &__text {
           text-transform: uppercase;
-         //   font-weight: 600;
-         //   font-family: $font-family;
+            font-weight: 600;
+            font-family: $font-family;
          }
        }
      } 
    }
   
    .rating {
-     // background-color: $primary-normal;
+     background-color: $primary-normal;
      padding: 6px 12px;
      border-radius: 3px;
      display: flex;
@@ -119,7 +118,7 @@
      justify-content: center;
   
      &__count {
-     //   color: $background-500;
+       color: $background-500;
        font-size: 14px;
        display: block;
      }

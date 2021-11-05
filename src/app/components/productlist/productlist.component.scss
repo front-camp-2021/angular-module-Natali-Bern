@@ -1,0 +1,10 @@
+@import '../../../assets/styles/variables.scss';
+@import '../../../assets/styles/mixin.scss';
+
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: start;
+    margin-bottom: 28px;
+  }
