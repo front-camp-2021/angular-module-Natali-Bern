@@ -16,31 +16,31 @@ export interface Products {
 @Injectable({ providedIn: 'root' })
 export class ProductsData {
   public products: Products[] = [];
-  public filteredProduct: Products[] = [];
-  public currentPage: number = 1;
-  public totalPages: number = 10;
-  public itemPerPage: number = 9;
-  public pageItems: Products[] = [];
+   public filteredProduct: Products[] = [];
+   public currentPage: number = 1;
+   public totalPages: number = 10;
+   public itemPerPage: number = 9;
+   public pageItems: Products[] = [];
 
   constructor(private http: HttpClient) { }
 
-  filter(): void {
-    this.filteredProduct = this.products
-    this.totalPages = Math.ceil(this.filteredProduct.length / this.itemPerPage)
-    this.page()
-  }
+   filter(): void {
+     this.filteredProduct = this.products
+     this.totalPages = Math.ceil(this.filteredProduct.length / this.itemPerPage)
+     this.page()
+   }
 
-  page(): void {
-    const last = this.currentPage * this.itemPerPage;
-    const first = last - this.itemPerPage;
-    this.pageItems = [...this.filteredProduct.slice(first, last)]
-  }
+   page(): void {
+     const last = this.currentPage * this.itemPerPage;
+     const first = last - this.itemPerPage;
+     this.pageItems = [...this.filteredProduct.slice(first, last)]
+   }
 
   fetchProducts(): Observable<Products[]> {
     return this.http.get<Products[]>('http://localhost:3001/products')
       .pipe(tap((products) => {
         this.products = products
-        this.filter()
+       this.filter()
       }
       ))
   }

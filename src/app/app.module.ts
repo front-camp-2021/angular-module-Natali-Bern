@@ -6,7 +6,10 @@ import { AppComponent } from './app.component';
 import { ProductcardComponent } from './components/productcard/productcard.component';
 import { HeaderComponent } from './components/header/header.component';
 import { ProductlistComponent } from './components/productlist/productlist.component';
-
+ import { HttpClientModule } from '@angular/common/http';
+import { FiltercontainerComponent } from './components/filtercontainer/filtercontainer.component';
+import { FiltercheckboxComponent } from './components/filtercheckbox/filtercheckbox.component';
+import { FilterformComponent } from './components/filterform/filterform.component';
 
 
 @NgModule({
@@ -15,11 +18,15 @@ import { ProductlistComponent } from './components/productlist/productlist.compo
     ProductcardComponent,
     HeaderComponent,
     ProductlistComponent,
+    FiltercontainerComponent,
+    FiltercheckboxComponent,
+    FilterformComponent,
     
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+     HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

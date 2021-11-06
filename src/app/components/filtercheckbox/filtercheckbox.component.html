@@ -1,0 +1,29 @@
+<div class="form__group">
+    <h3 class="form__group-title">{{title}}</h3>
+
+    <div class="filters__container-item">
+        <div class="form__checkbox">
+          <input id="cell-phones"
+                 type="checkbox" [value]='item' 
+                 class="filter-container__checkbox" (click)="onClick($event)" 
+                 [checked]="false">
+          <label for="cell-phones">
+            <span>{{item}}</span>
+          </label>
+        </div>
+        <span class="amount">1920</span>
+      </div>
+
+      <div class="filters__container-item">
+        <div class="form__checkbox">
+          <input id="computers-tablets"
+                 type="checkbox" [value]='item' 
+                 class="filter-container__checkbox" (click)="onClick($event)" 
+                 [checked]="false">
+          <label for="cell-phones">
+            <span>{{item}}</span>
+          </label>
+        </div>
+        <span class="amount">1820</span>
+      </div>
+</div>
