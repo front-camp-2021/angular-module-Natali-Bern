@@ -1,0 +1,40 @@
+@import '../../../assets/styles/variables.scss';
+@import '../../../assets/styles/mixin.scss';
+
+.filter-container {
+    &__title {
+        font-weight: 600;
+        font-size: 18px;
+        padding-bottom: 10px;
+      }
+}
+
+::ng-deep {
+      .ngx-slider {
+          width: 95%;
+        }
+        .ngx-slider-selection {
+          background: $primary-normal;
+       }
+       .ngx-slider-pointer {
+        background-color: $background-0;
+        height: 1.3em;
+        width: 0.4em;
+        background-image: url(../../../assets/images/range-thumb-icon.svg) !important;
+        background-repeat: no-repeat;
+        margin-top: 6px;
+        pointer-events: auto;
+       }
+
+      .ngx-slider-pointer-max {
+        transform: rotate(180deg);
+        margin-top: 4px;
+       }
+      .ngx-slider-pointer.ngx-slider-active {
+        outline:0;
+       }
+      .ngx-slider-pointer.ngx-slider-active:after {
+        display: none;
+        }
+     }
+ 

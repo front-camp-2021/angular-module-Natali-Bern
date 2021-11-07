@@ -1,7 +1,7 @@
 <div class="form__group">
     <h3 class="form__group-title">{{title}}</h3>
 
-    <div class="filters__container-item">
+    <!-- <div class="filters__container-item">
         <div class="form__checkbox">
           <input id="cell-phones"
                  type="checkbox" [value]='item' 
@@ -12,7 +12,7 @@
           </label>
         </div>
         <span class="amount">1920</span>
-      </div>
+      </div> 
 
       <div class="filters__container-item">
         <div class="form__checkbox">
@@ -25,5 +25,27 @@
           </label>
         </div>
         <span class="amount">1820</span>
-      </div>
+      </div> -->
+
+      <div class="filter-container__title">
+        {{title}}
+    </div>
+    <ul class="filter-container__list">
+            <li *ngFor="let item of items; let i = index">
+                <div class="filter-container__container-checkbox">
+                    <label class="filter-container__label">
+                        <input [name]='type' type="checkbox" [value]='item' 
+                        class="filter-container__checkbox" (click)="onClick($event)" 
+                        [checked]="false"
+                        />
+                        <div class="filter-container__checkbox-custom"></div>
+                        <span class="filter-container__value">{{item}}</span>
+                    </label>
+                    <div class="filter-container__item-counter">1920</div>
+                </div>
+            </li>
+    </ul>
+
+
+
 </div>

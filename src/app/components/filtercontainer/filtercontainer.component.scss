@@ -1,0 +1,14 @@
+@import '../../../assets/styles/variables.scss';
+@import '../../../assets/styles/mixin.scss';
+
+
+.filter-container {
+    &__text {
+      font-size: 18px;
+    }
+    &__btn {
+      width: 45px;
+      height: 40px;
+      background: $background-0;
+    }
+  }

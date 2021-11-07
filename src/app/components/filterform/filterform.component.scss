@@ -1,0 +1,32 @@
+@import '../../../assets/styles/variables.scss';
+@import '../../../assets/styles/mixin.scss';
+
+.filter-container {
+    &__form {
+        max-width: 380px;
+        padding-top: 20px;
+        padding-left: 50px;
+      }
+      
+    &__horizontal-line {
+        margin-bottom: 33px;
+        margin-top: 10px;
+      }
+
+// @media (max-width: map-get($breakpoints, lg)) {
+
+//         &__form {
+//             padding-top: 10px;
+//             padding-left: 10px;
+//         }
+
+//         &__horizontal-line {
+//             margin-bottom: 15px;
+//             margin-top: 7px;
+//             width: 300px;
+//             margin-right: 15px;
+//         }
+//       }
+
+// }
+}

@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { ProductsData } from '../../shared/product.data';
+import { ProductsService } from '../../shared/product.data';
 
 @Component({
   selector: 'app-filtercheckbox',
@@ -11,13 +11,13 @@ export class FiltercheckboxComponent implements OnInit {
   @Input() items: string[] = []
   @Input() type: string = ''
   d: boolean = true
-  constructor(private productsData: ProductsData) { }
+  constructor(private productsData: ProductsService) { }
 
   ngOnInit(): void {
   }
 
-  // onClick(event: any) {
-  //   this.productsData.setCheckboxFilter(event.target.name, event.target.value, event.target.checked)
-  // }
+    onClick(event: any) {
+      this.productsData.setCheckboxFilter(event.target.name, event.target.value, event.target.checked)
+    }
 
 }
