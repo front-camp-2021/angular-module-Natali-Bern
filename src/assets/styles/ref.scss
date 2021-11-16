@@ -1,0 +1,6 @@
+@import './colors.scss';
+
+.reference {
+    text-decoration: none;
+    color: map-get($colors,black);
+  }

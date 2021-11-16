@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
-// import { Product } from 'src/app/data/productData';
+import { ItemPageService } from '../../services/item-page/item-page.service';
+import { WishlishtService } from '../../services/wishlist/wishlist.service';
 
 @Component({
   selector: 'app-productcard',
@@ -9,26 +10,34 @@ import { Component, Input, OnInit } from '@angular/core';
 
 export class ProductcardComponent implements OnInit {
 
-  id: string = ''
-  images: Array<[]> = []
-  title: string = ''
-  rating: number = 0
-  price: number = 0
-  category: string = ''
-  brand: string = ''
+   @Input() card: any
+   inInWishlist: boolean = false;
 
-  @Input() item: any
-  constructor() { }
+   constructor(
+     
+    private wishlishtService: WishlishtService,
+    private itemPageService: ItemPageService
+    ) { }
 
-  ngOnInit(): void {
-    this.id = this.item['id']
-    this.images = this.item['images']
-    this.title = this.item['title']
-    this.rating = this.item['rating']
-    this.price = this.item['price']
-    this.category = this.item['category']
-    this.brand = this.item['brand']
+
+   ngOnInit(): void {
+    this.wishlishtService.getWishlistItems().forEach((item: any) => {
+      if(item.id === this.card.id) {
+        this.inInWishlist = true;
+      }
+    })
   }
 
-  
+  addToWishlist(card: any):void {
+    if(!this.inInWishlist) {
+      this.wishlishtService.addItem(card)
+    } else {
+      this.wishlishtService.removeItem(card);
+    }
+    this.inInWishlist = !this.inInWishlist;
+  }
+
+  setActiveItem() {
+    this.itemPageService.setCurrentItem(this.card);
+  } 
 }

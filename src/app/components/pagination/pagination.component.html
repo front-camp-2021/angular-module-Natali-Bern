@@ -1,0 +1,55 @@
+<!-- <p>pagination works!</p> -->
+<!-- <button class="pagination__reference-direction button"
+(click)="productsService.setCurrentPage(productsService.getCurrentPage() - 1)"
+> -->
+    <!-- <img src="../../../assets/img/PathNav2.svg" alt="navigation path" /> -->
+<!-- </button>
+<div class="pagination__pages reference">
+    <div class="pagination__container" *ngFor='let item of getCounterPages(); let i = index'
+        [ngClass]="{'active': i + 1 === productsService.getCurrentPage()}">
+        <button class="button" [ngClass]="{'active': i + 1 === productsService.getCurrentPage()}"
+        (click)="productsService.setCurrentPage(item + 1)"
+        >
+            {{item + 1}}
+        </button>
+    </div>
+</div>
+<button class="pagination__reference-direction button"
+(click)="productsService.setCurrentPage(productsService.getCurrentPage() + 1)"
+>
+    <img src="../../../assets/img/PathNav1.svg" alt="navigation path" />
+</button> -->
+
+<div class="pagination">
+    <button
+      *ngIf="activePage - 1 !== 0"
+      class="pagination__button-page-back"
+      #pageNum
+      (click)="setPages(pageNum, pageBack)"
+    ></button>
+    <div class="pagination__main">
+      <div *ngFor="let page of totalPages">
+        <div *ngIf="page === activePage - 1">
+          <button
+            class="pagination__page active"
+            #pageNum
+            (click)="setPages(pageNum)"
+          >
+            {{ page + 1 }}
+          </button>
+        </div>
+        <div *ngIf="page !== activePage - 1">
+          <button class="pagination__page" #pageNum (click)="setPages(pageNum)">
+            {{ page + 1 }}
+          </button>
+        </div>
+      </div>
+    </div>
+    <button
+      *ngIf="activePage - 1 !== totalPages[totalPages.length - 1]"
+      class="pagination__button-page-forward"
+      #pageNum
+      (click)="setPages(pageNum, pageForward)"
+    ></button>
+  </div>
+  

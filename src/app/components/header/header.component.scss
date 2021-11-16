@@ -1,70 +1,117 @@
- @import '../../../assets/styles/variables.scss';
- @import '../../../assets/styles/mixin.scss';
+//  @import '../../../assets/styles/variables.scss';
+//  @import '../../../assets/styles/mixin.scss';
 
 
 
-.header__logo {
-    display: flex;
-    align-items: center;
-    padding-bottom: 36px;
+// .header__logo {
+//     display: flex;
+//     align-items: center;
+//     padding-bottom: 36px;
   
   
-    &-img {
-        width: 91px;
-        height: 72px;
-    }
+//     &-img {
+//         width: 91px;
+//         height: 72px;
+//     }
   
-    &-text {
-        display: inline-block;
-        padding-left: 22px;
-        font-weight: 600;
-        font-size: 48px;
-        color: #7E72F2;
-  }
-}
+//     &-text {
+//         display: inline-block;
+//         padding-left: 22px;
+//         font-weight: 600;
+//         font-size: 48px;
+//         color: #7E72F2;
+//   }
+// }
 
-.header__logo-text {
-    display: inline-block;
-    padding-left: 22px;
-    font-weight: 600;
-    font-size: 48px;
-    color: #7E72F2;   
-}
+// .header__logo-text {
+//     display: inline-block;
+//     padding-left: 22px;
+//     font-weight: 600;
+//     font-size: 48px;
+//     color: #7E72F2;   
+// }
 
-.breadcrumb {
+// .breadcrumb {
 
 
-    &__list {
-      display: flex;
-      align-items: center;
-      margin: 0;
-      padding: 0;
-      list-style: none;
-    }
+//     &__list {
+//       display: flex;
+//       align-items: center;
+//       margin: 0;
+//       padding: 0;
+//       list-style: none;
+//     }
   
-    &__item {
-      display: flex;
-      align-items: center;
-      padding-right: 12px;
-    }
+//     &__item {
+//       display: flex;
+//       align-items: center;
+//       padding-right: 12px;
+//     }
       
   
-      &__link {
-        cursor: default;
-        text-decoration: none;
-        color: $primary-normal;
-        }
+//       &__link {
+//         cursor: default;
+//         text-decoration: none;
+//         color: $primary-normal;
+//         }
   
-      &:last-child {
-        padding-right: 0;
-        font-size: 0.875rem;
-        color: typography-700;
-    }
+//       &:last-child {
+//         padding-right: 0;
+//         font-size: 0.875rem;
+//         color: typography-700;
+//     }
   
-    .link-icon {
-    display: none;
-    padding-left: 12px;
-    font-size: 0.75rem;
-    color: $typography-900;
+//     .link-icon {
+//     display: none;
+//     padding-left: 12px;
+//     font-size: 0.75rem;
+//     color: $typography-900;
+//     }
+//   }
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap');
+
+$page-background-color: #F9F9F9;
+$elements-main-color: #FFFFFF;
+$button-primary-color: #6F64F8;
+$button-secondary-color: #EDEDED;
+$main-text-color: #2C2C2C;
+$secondary-text-color: #7E72F2;
+$shadow-color: grey;
+
+$font-weight-light: 300;
+$font-weight-medium: 400;
+$font-weight-large: 600;
+
+body {
+    background-color: $page-background-color;
+    position: relative!important;
+}
+
+* {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+ }
+
+ .header {
+    display: flex;
+    align-items: center;
+    
+    &__logo {
+        align-self: center;
+        background-image: url(../../../assets/images/logo.svg);
+        margin: 10px;
+        width: 90px;
+        height: 70px;
+        background-size: 100%;
+        background-repeat: no-repeat;
     }
-  }
+
+    &__text {
+        font-size: 48px;
+        line-height: 27px;
+        color: $secondary-text-color;
+        font-weight: $font-weight-large;
+    }
+}

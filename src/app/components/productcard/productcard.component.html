@@ -1,10 +1,10 @@
- <div class="product-card">
+ <!-- <div class="product-card">
     <div class="product-card__inner">
         <div class="product-card__image" >
          
         
-        <!-- <img class="product-card__image" src="../../../assets/images/apple-watch.png" alt="product image"> -->
-        <img class='product-card__image' [src]='images[0]' alt="Product" />
+         <img class="product-card__image" src="../../../assets/images/apple-watch.png" alt="product image"> -->
+        <!-- <img class='product-card__image' [src]='images[0]' alt="Product" />
         </div>
         <div class="product-card__wrapper">
             <div class="product-card__rating rating">
@@ -34,5 +34,62 @@
                 <span class="button-addtocart__text">Add to Cart</span>
             </button>
         </div>
-</div>  
+</div>   --> 
+
+<div class="products__card">
+    <img [src]="card.images[0]" class="products__image" [alt]="card.title.slice(0, 50)"> 
+    <!-- <img class='card__image' [src]='images[0]' alt="Product" /> -->
+    <div class="products__rating-and-price">
+      <div class="products__rating">{{ card.rating }}</div>
+      <div class="products__price">₴{{ card.price }}</div>
+    </div>
+    <ul class="products__item-descriptions">
+
+        <li (click)="setActiveItem()"
+        [routerLink]="['/products', card.id]" class="products__item-name"> {{ card.title.slice(0, 50) + "..." }} </li>
+
+        <li class="products__item-description">
+            Redesigned from scratch and completely revised.
+        </li>
+    </ul>
+
+    <div class="products__buttons">
+      <button *ngIf="!inInWishlist" class="products__wishlist-button" (click)="addToWishlist(card)">
+        WISHLIST
+      </button>
+      <button *ngIf="inInWishlist" class="products__wishlist-button" (click)="addToWishlist(card)">
+      ADDED
+    </button>
+      <button *ngIf="inInWishlist" class="products__add-to-cart-button"
+      (click)="addToWishlist(card)"
+    >
+     ADD TO CART
+    </button>  
+
+    <!-- <button *ngIf='!isFavorite(id)' class="products__wishlist-button" ref={refFavorite}>WISHLIST</button>
+    <button *ngIf="!isInCart(id)" class="products__add-to-cart-button" ref={refCart}>ADD TO CART</button> -->
+
+
+
+
+
+    <!-- <button class='card__wishlist-btn button' name="wishlist" (click)='setFavorite()'>
+        <div class="card__container-btn" >
+          <img class="card__heart" src="../../../assets/img/Path.svg" alt='Like' />
+          <div *ngIf='!isFavorite(id)' class="card__text-btn" ref={refFavorite}>WISHLIST</div>
+        </div>
+      </button>
+      <button class='card__add-btn button' name="addToCart" (click)='setCart()'>
+        <div *ngIf="!isInCart(id)" class="card__container-btn">
+          <img class='card__add-to-cart' src="../../../assets/img/shopping-bag.svg" alt="Shop" 
+          ref={refCartImg} />
+          <div class="card__text-btn" ref={refCart}>ADD TO CART</div>
+        </div>
+        <div *ngIf="isInCart(id)" class="card__container-btn">
+          <div class="card__text-btn" ref={refCart}>REMOVE FROM CART</div>
+        </div>
+      </button> -->
+    
+    
+  </div>
 

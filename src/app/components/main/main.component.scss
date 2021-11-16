@@ -1,0 +1,45 @@
+// @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap');
+
+// $page-background-color: #F9F9F9;
+// $elements-main-color: #FFFFFF;
+// $button-primary-color: #6F64F8;
+// $button-secondary-color: #EDEDED;
+// $main-text-color: #2C2C2C;
+// $secondary-text-color: #7E72F2;
+// $shadow-color: grey;
+
+// $font-weight-light: 300;
+// $font-weight-medium: 400;
+// $font-weight-large: 600;
+
+// .main {
+//     display: flex;
+//     height: 1296.5px;
+//     margin: 10px;
+  
+//     .filters {
+//       width: 30%;
+//       position: relative;
+//     }
+  
+//     .cards {
+//       width: 70%;
+  
+//        .productlist {
+//          display: grid;
+//          grid-template-columns: 33% 33% 33%;
+//          grid-template-rows: 1fr 1fr 1fr;
+//          gap: 0rem 8px;
+//          width: 100%;
+//          text-align: center;
+  
+//          .products__filters-error-message {
+//            grid-column: span 3;
+//            border-radius: 4px;
+//            padding: 15px;
+//            background-color: $elements-main-color;
+//            filter: drop-shadow(-0.4px 0.5px 0.05rem $shadow-color);
+//          }
+//        }
+//     }
+// }

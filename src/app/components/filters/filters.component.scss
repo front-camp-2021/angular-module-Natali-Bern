@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap");
+
+$page-background-color: #f9f9f9;
+$elements-main-color: #ffffff;
+$button-primary-color: #6f64f8;
+$button-secondary-color: #ededed;
+$main-text-color: #2c2c2c;
+$secondary-text-color: #7e72f2;
+$shadow-color: grey;
+
+$font-weight-light: 300;
+$font-weight-medium: 400;
+$font-weight-large: 600;
+
+.filters__main {
+  filter: drop-shadow(-0.4px 0.5px 0.05rem $shadow-color);
+  margin-top: 5px;
+  position: absolute;
+  width: 95%;
+  height: 96%;
+  background-color: $elements-main-color;
+  border-radius: 4px;
+  font-size: 16px;
+  line-height: 32px;
+  font-weight: $font-weight-large;
+
+  ::ng-deep {
+    .custom__slider {
+      margin: 15px;
+      .ngx-slider {
+          .ngx-slider-pointer-min {
+            background-color: $button-primary-color!important;
+          }
+          .ngx-slider-pointer-max {
+            background-color: $button-primary-color!important;
+          }
+          .ngx-slider-selection {
+            background-color: $button-primary-color!important;
+          }
+      }
+    }
+  }
+
+  .filters__section-header {
+    font-weight: $font-weight-large;
+    font-size: 18px;
+    line-height: 21px;
+  }
+
+  .filters_line {
+    margin-top: 5px;
+    margin-left: 5px;
+    justify-content: center;
+    border-bottom: 2px solid $button-secondary-color;
+    width: 95%;
+  }
+
+  .filters__category {
+    margin-left: 10px;
+
+    .filters__checkbox-square {
+      cursor: pointer;
+    }
+  }
+}
+
+.filters__filters-reset-button {
+  font-size: 100%;
+  height: 30px;
+  width: 95%;
+  position: absolute;
+  bottom: 0px;
+  background-color: $button-primary-color;
+  color: $elements-main-color;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}

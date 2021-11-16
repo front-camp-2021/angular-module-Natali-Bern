@@ -1,0 +1,19 @@
+<!--<p>wishlist works!</p> -->
+<div class="wishlist-container">
+    <button class="wishlist-nav-container__wishlist-back-btn" routerLink="/">
+      Back to Purchases
+    </button>
+  
+    <button class="wishlist-nav-container__wishlist-clear-btn" (click)="clearWishlist()">
+      ❌ Clear Wishlist
+    </button>
+  </div>
+  
+  <div class="wishlist-cards-wrapper">
+    <div class="wishlist-cards-wrapper__container">
+      <div *ngFor="let card of wishlistCards">
+          <app-productcard [card]="card"></app-productcard>
+      </div>
+      <h1 *ngIf="wishlistCards.length === 0" class="wishlist-cards-wrapper__message">No items were added yet</h1>
+    </div>
+  </div>

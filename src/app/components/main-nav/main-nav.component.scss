@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap');
+
+$page-background-color: #F9F9F9;
+$elements-main-color: #FFFFFF;
+$button-primary-color: #6F64F8;
+$button-secondary-color: #EDEDED;
+$main-text-color: #2C2C2C;
+$secondary-text-color: #7E72F2;
+$shadow-color: grey;
+
+$font-weight-light: 300;
+$font-weight-medium: 400;
+$font-weight-large: 600;
+
+.main-content-nav {
+    display: flex;
+    margin: 10px;
+    
+    .filters-header {
+        width: 30%;
+        
+        &__nav {
+            display: flex;
+            justify-content: space-between;
+            width: 95%;
+            
+            .filters-header__marker {
+                font-size: 18px;
+                line-height: 21px;
+                font-weight: $font-weight-medium;
+            }
+
+            .filters-header__filters-hide-button {
+                background-color: $elements-main-color;
+                height: 25px;
+                width: 30px;
+                border-radius: 4px;
+                border: none;
+                background-image: url(../../../assets/images/arrows-left.svg);
+                background-repeat: no-repeat;
+                background-position: left 50% bottom 50%;
+                filter: drop-shadow( -0.4px 0.5px 0.05rem $shadow-color);
+                cursor: pointer;
+            }
+        }
+    }
+
+    .search-results {
+        display: flex;
+        justify-content: space-between;
+        width: 70%;
+
+        &__number {
+            align-items: center;
+            font-size: 18px;
+            line-height: 21px;
+            font-weight: $font-weight-medium;
+        }
+
+        &__wishlist-button {
+            margin-left: 5px;
+            height: 25px;
+            width: 25px;
+            border: none;
+            border-radius: 4px;
+            background-color: $button-primary-color;
+            background-image: url(../../../assets/images/wishlist-img.svg);
+            background-repeat: no-repeat;
+            background-position: bottom 50% left 50%;
+            cursor: pointer;
+        }
+
+         &__discount {
+             margin-left: 5px;
+             height: 25px;
+            width: 25px;
+             border: none;
+             border-radius: 4px;
+             background-color: $button-primary-color;
+             background-image: url(../../../assets/images/add-to-cart-img.svg);
+             background-repeat: no-repeat;
+             background-position: bottom 50% left 50%;
+             cursor: pointer;
+         }
+    }
+}

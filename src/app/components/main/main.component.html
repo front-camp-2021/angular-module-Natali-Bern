@@ -1,0 +1,16 @@
+<!-- <p>main works!</p> -->
+<app-main-nav [itemQuantity]="cardData.length"></app-main-nav> 
+
+<div class="main-content">
+  <app-filters
+    class="filters"
+    [categories]="categoriesData"
+    [brands]="brandsData"
+  ></app-filters>
+  <app-productlist
+    class="cards"
+    [cards]="cardData.slice(pages[0], pages[1])"
+  ></app-productlist>
+</div>
+
+<app-pagination [cards]="cardData" [activePage]="pages[2]"></app-pagination>
