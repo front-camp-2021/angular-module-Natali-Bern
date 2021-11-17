@@ -1,0 +1,33 @@
+<div class="pagination">
+    <button
+      *ngIf="activePage - 1 !== 0"
+      class="pagination__button-page-back"
+      #pageNum
+      (click)="setPages(pageNum, pageBack)"
+    ></button>
+    <div class="pagination__main">
+      <div *ngFor="let page of totalPages">
+        <div *ngIf="page === activePage - 1">
+          <button
+            class="pagination__page active"
+            #pageNum
+            (click)="setPages(pageNum)"
+          >
+            {{ page + 1 }}
+          </button>
+        </div>
+        <div *ngIf="page !== activePage - 1">
+          <button class="pagination__page" #pageNum (click)="setPages(pageNum)">
+            {{ page + 1 }}
+          </button>
+        </div>
+      </div>
+    </div>
+    <button
+      *ngIf="activePage - 1 !== totalPages[totalPages.length - 1]"
+      class="pagination__button-page-forward"
+      #pageNum
+      (click)="setPages(pageNum, pageForward)"
+    ></button>
+  </div>
+  

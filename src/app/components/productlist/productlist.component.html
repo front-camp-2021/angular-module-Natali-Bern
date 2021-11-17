@@ -1,0 +1,8 @@
+<div class="productlist">
+    <div *ngIf="cards.length === 0" class="products__filters-error-message">
+            Nothing was found. Please, reset your filters or check your input
+    </div>
+    <div *ngFor="let card of cards">
+        <app-productcard [card]="card"></app-productcard>
+    </div>
+</div>

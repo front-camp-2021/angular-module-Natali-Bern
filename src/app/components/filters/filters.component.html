@@ -1,0 +1,21 @@
+<div class="filters__main">
+    <div *ngIf="sliderInitialized">
+      <div class="custom__slider">
+        <ngx-slider [(value)]="minValue" [(highValue)]="maxValue" [options]="options"></ngx-slider>
+      </div>
+    </div>
+    <div class="filters__category">
+      <h5 class="filters__section-header">Categories</h5>
+      <div *ngFor="let category of categories">
+        <app-filter-checkbox [item]="category" [section]="sectionCategories"></app-filter-checkbox>
+      </div>
+    </div>
+    <div class="filters_line"></div>
+    <div class="filters__category">
+      <h5 class="filters__section-header">Brands</h5>
+      <div *ngFor="let brand of brands">
+        <app-filter-checkbox [item]="brand" [section]="sectionBrands"></app-filter-checkbox>
+      </div>
+    </div>
+  </div>
+  <button class="filters__filters-reset-button" (click)="reset()">Clear All Filters</button>

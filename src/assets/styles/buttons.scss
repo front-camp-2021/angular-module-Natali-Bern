@@ -1,0 +1,46 @@
+@import './colors.scss';
+@import './mixin.scss';
+
+$btns: (
+  primary: (
+    bg: $primary-normal,
+    text: $typography-0
+  ),
+  default: (
+    bg: $background-500,
+    text: $typography-900
+  ),
+  'white': (
+    bg: $background-0,
+    text: $typography-300
+  )
+);
+
+%btn {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 3px;
+  font-size: 0.875rem;
+  font-weight: 400;
+  font-family: $font-family;
+  line-height: 1;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+@each $class-name, $data in $btns {
+  .btn-#{$class-name} {
+    $bg: map.get($data, bg);
+    $text: map.get($data, text);
+
+    @extend %btn;
+
+    background-color: $bg;
+    color: $text;
+
+    &:hover {
+      background-color: darken($bg, 4);
+    }
+  }
+}

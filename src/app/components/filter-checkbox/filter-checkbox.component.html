@@ -1,0 +1,9 @@
+<div class="filters__checkbox" #checkbox (click)="setFilters(checkbox)">
+    <input
+      type="checkbox"
+      [id]="item"
+      name="All"
+      class="filters__checkbox-square"
+    />
+    <label [for]="item">{{ item }}</label>
+  </div>

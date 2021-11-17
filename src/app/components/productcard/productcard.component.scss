@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap');
+
+$page-background-color: #F9F9F9;
+$elements-main-color: #FFFFFF;
+$button-primary-color: #6F64F8;
+$button-secondary-color: #EDEDED;
+$main-text-color: #2C2C2C;
+$secondary-text-color: #7E72F2;
+$shadow-color: grey;
+
+$font-weight-light: 300;
+$font-weight-medium: 400;
+$font-weight-large: 600;
+
+.products__card {
+    filter: drop-shadow( -0.4px 0.5px 0.05rem $shadow-color);
+    position: relative;
+    text-align: center;
+    height: 400px;
+
+    background-color: $elements-main-color;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    
+    .products__image {
+        margin-top: 20px;
+        margin-bottom: 40px;
+        max-height: 180px;
+        max-width: 180px;
+    }
+
+    .products__rating-and-price {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0% 10% 0% 10%;
+        
+
+        .products__rating {
+            bottom: 150px;
+            position: absolute;
+            color: $elements-main-color;
+            padding: 2% 10% 2% 5%;
+            background-color: $button-primary-color;
+            background-image: url(../../../assets/images/star.svg);
+            background-repeat: no-repeat;
+            background-position: bottom 50% left 90%;
+            background-size: 20px;
+            border-radius: 4px;
+            font-size: 15px;
+        }
+
+        .products__price {
+            right: 25px;
+            bottom: 155px;
+            position: absolute;
+        }
+    }
+
+    .products__item-descriptions {
+        list-style-type:none; 
+        text-align: start;
+        color: $main-text-color;
+        padding: 0% 0% 2% 7%;
+        margin: 2%;
+        bottom: 60px;
+        position: absolute;
+
+        .products__item-name {
+            font-size: 16px;
+            line-height: 19px;
+            font-weight: $font-weight-medium;
+            cursor: pointer;
+        }
+
+        .products__item-description {
+            font-size: 12px;
+            line-height: 14px;     
+            font-weight: $font-weight-light;
+        }
+
+         .products__item-page-link {
+             text-decoration: none;
+         }
+    }
+
+    .products__buttons {
+        position: absolute;
+        bottom: 0px; 
+        width: 100%;
+        height: 10%;
+        display: flex;
+
+        .products__wishlist-button {
+            align-items: center;
+            width: 50%;
+            border: none;
+            background-color: $button-secondary-color;
+            border-bottom-left-radius: 4px;
+            background-image: url(../../../assets/images/heart.svg);
+            background-size: 10%;
+            background-repeat: no-repeat;
+            background-position: left 15% bottom 50%;
+        }
+
+        .products__add-to-cart-button {
+            align-items: center;
+            border: none;
+            width: 50%;
+            color: $elements-main-color;
+            background-color: $button-primary-color;
+            border-bottom-right-radius: 4px;
+            background-image: url(../../../assets/images/shopping-bag.svg);
+            background-size: 10%;
+            background-repeat: no-repeat;
+            background-position: left 5% bottom 50%;
+        }
+    }
+}

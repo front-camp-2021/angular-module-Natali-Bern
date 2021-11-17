@@ -1,0 +1,26 @@
+<div *ngIf="empty">
+    <h3 class="not-found-message">Ooops, page not found!</h3>
+    <div class="page-back-btn-wrapper">
+      <button class="page-back-btn-wrapper-btn" routerLink="/products">
+        Take me home
+      </button>
+    </div>
+  </div>
+  
+  <div *ngIf="!empty">
+    <div class="item-page">
+      <img class="item-page__image" [src]="card.images[0]" [alt]="card.title" />
+      <div class="item-page__description">
+        <button class="item-page__description-rating-btn">
+          Average rating {{ card.rating }}
+        </button>
+        <span class="item-page__description-price">
+          {{ card.price }}
+        </span>
+        <span>
+          {{ card.title }}
+        </span>
+      </div>
+    </div>
+  </div>
+  

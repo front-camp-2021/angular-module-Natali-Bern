@@ -1,0 +1,61 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap");
+
+$page-background-color: #f9f9f9;
+$elements-main-color: #ffffff;
+$button-primary-color: #6f64f8;
+$button-secondary-color: #ededed;
+$main-text-color: #2c2c2c;
+$secondary-text-color: #7e72f2;
+$shadow-color: grey;
+
+$font-weight-light: 300;
+$font-weight-medium: 400;
+$font-weight-large: 600;
+
+.not-found-message {
+  text-align: center;
+}
+
+.page-back-btn-wrapper {
+  display: flex;
+  justify-content: center;
+
+  &-btn {
+    height: 50px;
+    width: 200px;
+    border: none;
+    border-radius: 4px;
+    background-color: $button-primary-color;
+    cursor: pointer;
+  }
+}
+
+.item-page {
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 25%;
+  margin-right: 25%;
+
+  &__image {
+    border-radius: 4px;
+  }
+
+  &__description {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    &-rating-btn {
+      height: 30px;
+      font-size: 18px;
+      background-color: $button-primary-color;
+      border: none;
+      border-radius: 4px;
+    }
+
+    &-price {
+      position: relative;
+      top: 100px;
+    }
+  }
+}
